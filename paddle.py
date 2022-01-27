@@ -13,6 +13,7 @@ class Paddle(Turtle):
         item.shape('square')
         item.shapesize(stretch_wid=5, stretch_len=0.5)
         item.penup()
+        item.speed(0)
         item.color('white')
         return item
 
