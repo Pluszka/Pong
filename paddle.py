@@ -1,7 +1,7 @@
 from turtle import Turtle
 
 
-class Paddle:
+class Paddle(Turtle):
 
     def __init__(self, move_line):
         super().__init__()
@@ -11,7 +11,7 @@ class Paddle:
         item = Turtle()
         item.setposition(move_line, y=0)
         item.shape('square')
-        item.shapesize(stretch_wid=5, stretch_len=1)
+        item.shapesize(stretch_wid=5, stretch_len=0.5)
         item.penup()
         item.color('white')
         return item
