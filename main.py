@@ -21,7 +21,13 @@ screen.onkey(fun=left_paddle.move_up, key='w')
 screen.onkey(fun=left_paddle.move_down, key='s')
 
 game_on = True
-
 while game_on:
+    time.sleep(0.1)
     screen.update()
+    ball.move()
+
+    if ball.ball.ycor() > 290 or ball.ball.ycor() < -290:
+        ball.bounce()
+
+
 screen.exitonclick()

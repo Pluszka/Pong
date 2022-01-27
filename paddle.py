@@ -25,3 +25,4 @@ class Paddle(Turtle):
         currentX = self.paddle.xcor()
         currentY = self.paddle.ycor()
         self.paddle.setpos(currentX, currentY - 20)
+
