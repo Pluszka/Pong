@@ -42,7 +42,9 @@ while game_on:
 
     if ball.xcor() < -450:
         ball = Ball()
+        r_score.updateScore()
     elif ball.xcor() > 450:
         ball = Ball()
+        l_score.updateScore()
 
 screen.exitonclick()
