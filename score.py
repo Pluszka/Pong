@@ -6,12 +6,14 @@ FONT = ("Rockwell", 25, 'bold')
 
 class Score(Turtle):
 
-    def __init__(self, side):
+    def __init__(self, side, col):
         super().__init__()
         self.score = 0
         self.hideturtle()
         self.penup()
-        self.color('white')
+        self.setposition(x=0, y=-300)
+        self.draw()
+        self.color(col)
         self.goto(y=250, x=side)
         self.prompt()
 
@@ -22,3 +24,12 @@ class Score(Turtle):
         self.score += 1
         self.clear()
         self.prompt()
+
+    def draw(self):
+        self.setheading(90)
+        self.color('red')
+        for _ in range(10):
+            self.forward(30)
+            self.pendown()
+            self.forward(30)
+            self.penup()

@@ -4,18 +4,20 @@ from ball import Ball
 from score import Score
 import time
 
+r_col = '#EB5E28'
+l_col = "#CCC5B9"
 
 screen = Screen()
 screen.setup(width=900, height=600)
 screen.title('Pong')
-screen.bgcolor('black')
+screen.bgcolor('#252422')
 screen.tracer(0)
 
-right_paddle = Paddle(375)
-left_paddle = Paddle(-375)
+right_paddle = Paddle(375, r_col)
+left_paddle = Paddle(-375, l_col)
 ball = Ball()
-r_score = Score(30)
-l_score = Score(-30)
+r_score = Score(30, r_col)
+l_score = Score(-30, l_col)
 
 screen.listen()
 screen.onkey(fun=right_paddle.move_up, key='Up')
