@@ -14,7 +14,7 @@ class Ball(Turtle):
     def create(self):
         self.shape('square')
         self.penup()
-        self.color('white')
+        self.color('#1F7A8C')
         self.shapesize(stretch_wid=0.5, stretch_len=0.5)
 
 
@@ -29,3 +29,6 @@ class Ball(Turtle):
     def bounce_x(self):
         self.x_move *= -1
         self.move_speed *= 0.9
+
+    def change(self, col):
+        self.color(col)

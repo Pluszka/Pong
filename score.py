@@ -27,7 +27,7 @@ class Score(Turtle):
 
     def draw(self):
         self.setheading(90)
-        self.color('red')
+        self.color('#1F7A8C')
         for _ in range(10):
             self.forward(30)
             self.pendown()

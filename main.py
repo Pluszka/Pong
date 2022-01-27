@@ -36,9 +36,11 @@ while game_on:
 
     if ball.distance(right_paddle) < 60 and ball.xcor() > 360:
         ball.bounce_x()
+        ball.change(r_col)
 
     elif ball.distance(left_paddle) < 60 and ball.xcor() < -360:
         ball.bounce_x()
+        ball.change(l_col)
     else:
         if ball.xcor() < -450:
             ball = Ball()

@@ -7,7 +7,7 @@ class Paddle(Turtle):
         super().__init__()
         self.newPaddle(move_line, col)
 
-    def newPaddle(self, move_line,col):
+    def newPaddle(self, move_line, col):
         self.penup()
         self.setposition(move_line, y=0)
         self.shape('square')
@@ -23,4 +23,3 @@ class Paddle(Turtle):
         currentX = self.xcor()
         currentY = self.ycor()
         self.setpos(currentX, currentY - 20)
-
