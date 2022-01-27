@@ -9,7 +9,7 @@ class Ball(Turtle):
         self.create()
         self.x_move = 10
         self.y_move = 10
-
+        self.move_speed = 0.1
 
     def create(self):
         self.shape('square')
@@ -28,3 +28,4 @@ class Ball(Turtle):
 
     def bounce_x(self):
         self.x_move *= -1
+        self.move_speed *= 0.9

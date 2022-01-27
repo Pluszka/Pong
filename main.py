@@ -25,11 +25,9 @@ screen.onkey(fun=left_paddle.move_down, key='s')
 
 game_on = True
 while game_on:
-    time.sleep(0.1)
+    time.sleep(ball.move_speed)
     screen.update()
     ball.move()
-
-
 
     if ball.ycor() > 290 or ball.ycor() < -290:
         ball.bounce_y()
@@ -37,14 +35,14 @@ while game_on:
     if ball.distance(right_paddle) < 60 and ball.xcor() > 360:
         ball.bounce_x()
 
-    if ball.distance(left_paddle) < 60 and ball.xcor() < -360:
+    elif ball.distance(left_paddle) < 60 and ball.xcor() < -360:
         ball.bounce_x()
-
-    if ball.xcor() < -450:
-        ball = Ball()
-        r_score.updateScore()
-    elif ball.xcor() > 450:
-        ball = Ball()
-        l_score.updateScore()
-
+    else:
+        if ball.xcor() < -450:
+            ball = Ball()
+            r_score.updateScore()
+        elif ball.xcor() > 450:
+            ball = Ball()
+            ball.bounce_x()
+            l_score.updateScore()
 screen.exitonclick()
