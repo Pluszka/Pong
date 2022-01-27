@@ -5,25 +5,22 @@ class Paddle(Turtle):
 
     def __init__(self, move_line):
         super().__init__()
-        self.paddle = self.newPaddle(move_line)
+        self.newPaddle(move_line)
 
     def newPaddle(self, move_line):
-        item = Turtle()
-        item.setposition(move_line, y=0)
-        item.shape('square')
-        item.shapesize(stretch_wid=5, stretch_len=0.5)
-        item.penup()
-        item.speed(0)
-        item.color('white')
-        return item
-
+        self.setposition(move_line, y=0)
+        self.shape('square')
+        self.shapesize(stretch_wid=5, stretch_len=0.5)
+        self.penup()
+        self.speed(0)
+        self.color('white')
     def move_up(self):
-        currentX = self.paddle.xcor()
-        currentY = self.paddle.ycor()
-        self.paddle.setpos(currentX, currentY+20)
+        currentX = self.xcor()
+        currentY = self.ycor()
+        self.setpos(currentX, currentY+20)
 
     def move_down(self):
-        currentX = self.paddle.xcor()
-        currentY = self.paddle.ycor()
-        self.paddle.setpos(currentX, currentY - 20)
+        currentX = self.xcor()
+        currentY = self.ycor()
+        self.setpos(currentX, currentY - 20)
 
