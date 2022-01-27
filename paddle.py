@@ -1,16 +1,15 @@
 from turtle import Turtle
 
-move_line = 375
 
 class Paddle:
 
-    def __init__(self):
+    def __init__(self, move_line):
         super().__init__()
-        self.paddle = self.newPaddle()
+        self.paddle = self.newPaddle(move_line)
 
-    def newPaddle(self):
+    def newPaddle(self, move_line):
         item = Turtle()
-        item.setposition(move_line, y=40)
+        item.setposition(move_line, y=0)
         item.shape('square')
         item.shapesize(stretch_wid=5, stretch_len=1)
         item.penup()
